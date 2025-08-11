@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Manager</title>
+    <style>
+        body { font-family: Arial; margin: 20px; }
+        input { margin: 4px; padding: 6px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { border: 1px solid #ccc; padding: 8px; }
+        th { background: #eee; }
+        .flash-message {
+            color: red;
+            margin-bottom: 10px;
+            list-style: none;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contact Manager</h1>
+
+    <!-- Flash messages section -->
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul class="flash-message">
+          {% for message in messages %}
+            <li>{{ message }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+
+    <!-- Contact form -->
+    <form method="POST" action="/add">
+        <input name="first_name" placeholder="First Name" required>
+        <input name="last_name" placeholder="Last Name" required>
+        <input name="address" placeholder="Address" required>
+        <input type="text" name="email" placeholder="Email" required>
+        <input name="phone" placeholder="Phone" required>
+        <button type="submit">Add</button>
+    </form>
+
+    <!-- Contact list -->
+    <table>
+        <tr>
+            <th>First</th>
+            <th>Last</th>
+            <th>Address</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Actions</th>
+        </tr>
+        {% for c in contacts %}
+        <tr>
+            <td>{{ c.first_name }}</td>
+            <td>{{ c.last_name }}</td>
+            <td>{{ c.address }}</td>
+            <td>{{ c.email }}</td>
+            <td>{{ c.phone }}</td>
+            <td>
+                <a href="/edit/{{ c.id }}">Edit</a> |
+                <a href="/delete/{{ c.id }}" onclick="return confirm('Delete this contact?')">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

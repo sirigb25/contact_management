@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Contact</title>
+    <style>
+        body { font-family: Arial; margin: 20px; }
+        input { margin: 4px; padding: 6px; }
+    </style>
+</head>
+<body>
+    <h1>Edit Contact</h1>
+    <form method="POST">
+        <input name="first_name" value="{{ contact.first_name }}" required>
+        <input name="last_name" value="{{ contact.last_name }}" required>
+        <input name="address" value="{{ contact.address }}" required>
+        <input type="email" name="email" value="{{ contact.email }}" required>
+        <input name="phone" value="{{ contact.phone }}" required>
+        <button type="submit">Save</button>
+        <a href="/">Cancel</a>
+    </form>
+</body>
+</html>
