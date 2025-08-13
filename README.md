@@ -4,8 +4,11 @@ Perfect for learning CRUD operations, Flask routing, and database integration.
 
 Features:
 Add new contacts with name, email, and phone number.
+
 View all saved contacts in a clean table format.
+
 Edit and delete contacts easily.
+
 Lightweight and beginner-friendly codebase.
 
 Tech Stack:
