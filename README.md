@@ -3,13 +3,14 @@ A simple web application to add, view, and manage contacts using Flask and SQLit
 Perfect for learning CRUD operations, Flask routing, and database integration.
 
 Features:
-Add new contacts with name, email, and phone number.
 
-View all saved contacts in a clean table format.
+-Add new contacts with name, email, and phone number.
 
-Edit and delete contacts easily.
+-View all saved contacts in a clean table format.
 
-Lightweight and beginner-friendly codebase.
+-Edit and delete contacts easily.
+
+-Lightweight and beginner-friendly codebase.
 
 Tech Stack:
 Backend: Python and Flask ,
