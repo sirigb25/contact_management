@@ -9,8 +9,8 @@ Edit and delete contacts easily.
 Lightweight and beginner-friendly codebase.
 
 Tech Stack:
-Backend: Python, Flask
-Database: SQLite
+Backend: Python and Flask ,
+Database: SQLite,
 Frontend: HTML, CSS 
 
 Installation & Setup:
