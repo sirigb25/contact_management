@@ -14,6 +14,7 @@ Database: SQLite,
 Frontend: HTML, CSS 
 
 Installation & Setup:
+
 1.Clone the repository
 
 git clone https://github.com/<your-username>/contact-manager.git
